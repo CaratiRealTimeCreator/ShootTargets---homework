@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour //inheritance from MonoBehaviour
     public GameObject pauseScreen;
     public GameObject gameOverScreen;
     public TextMeshProUGUI scoreText;
-    private bool paused;
+    private bool paused; //encapsulation
     public bool gameOver;
     private int score;
 
