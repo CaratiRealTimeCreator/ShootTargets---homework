@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject targetPrefab;
+    public List<GameObject> targetPrefab;
     private float spawnRate;
     public GameManager gameManager;
 
@@ -26,8 +26,9 @@ public class SpawnManager : MonoBehaviour
     }
     public void SpawnTarget()
     {
+        int index = Random.Range(0, targetPrefab.Count);
         Vector3 rotation = new Vector3(0, 0, 0);
-        Instantiate(targetPrefab, RandomSpawnPos(), Quaternion.Euler(rotation));
+        Instantiate(targetPrefab[index], RandomSpawnPos(), Quaternion.Euler(rotation));
     }
 
     Vector3 RandomSpawnPos()

@@ -21,7 +21,7 @@ public class Targets : MonoBehaviour
         DestroyAfterTime();
     }
 
-    private void OnMouseDown()
+    public virtual void OnMouseDown()
     {
         if (!gameManager.gameOver)
         {
